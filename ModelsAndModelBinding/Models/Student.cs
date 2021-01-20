@@ -20,6 +20,7 @@ namespace ModelsAndModelBinding.Models
         /// The student's first and last name of student
         /// </summary>
         [Display(Name="Full Name:")]
+        [Required(ErrorMessage = "Full Name is required!")]
         public string FullName { get; set; }
 
         /// <summary>
@@ -33,6 +34,8 @@ namespace ModelsAndModelBinding.Models
         /// The student email (ends with @student.cptc.edu)
         /// </summary>
         [Display(Name="Email Address:")]
+        [EmailAddress]
+        [Required]
         [DataType(DataType.EmailAddress)]
         public string EmailAddress { get; set; }
 
@@ -40,6 +43,7 @@ namespace ModelsAndModelBinding.Models
         /// Primary phone number
         /// </summary>
         [Display(Name="Phone Number:")]
+        [Required]
         public string PhoneNumber { get; set; }
     }
 }
